@@ -4,13 +4,15 @@ docker run -d -p 8080:8080 gjvanhalem/grafeas:7be
 #clone the in-toto demo
 
 #in WSL
+cd /mnt/c/wsrabo/argos/totoify-grafeas
 
 #load layout in grafeas
-cd /mnt/c/wsrabo/argos/demo
-python ../totoify-grafeas/client/grafeas_load.py -t http://localhost:8080 -i demo1 -l root.layout
+python client/grafeas_load.py -t http://localhost:8080 -i demo1 -l root.layout
 #check at
 http://localhost:8080/v1alpha1/projects/demo/operations/layout_id
 http://localhost:8080/v1alpha1/projects/demo/notes
+
+cd /mnt/c/wsrabo/argos/demo
 
 #run clone step
 cd functionary_bob
