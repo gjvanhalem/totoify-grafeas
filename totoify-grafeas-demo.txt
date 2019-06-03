@@ -1,0 +1,39 @@
+#setup
+in WSL
+
+#create layout
+cd /mnt/c/wsrabo/argos/demo
+python ../totoify-grafeas/client/grafeas_load.py -t http://localhost:8080 -i demo1 -l root.layout
+#check at
+http://localhost:8080/v1alpha1/projects/demo/operations/layout_id
+http://localhost:8080/v1alpha1/projects/demo/notes
+
+#run clone step
+cd functionary_bob
+python ../../totoify-grafeas/client/grafeas_run.py -t http://localhost:8080 -i demo1 -k bob -n clone -p demo-project/foo.py -- git clone https://github.com/in-toto/demo-project.git
+#check at
+http://localhost:8080/v1alpha1/projects/demo/occurrences
+
+#run update version step
+python ../../totoify-grafeas/client/grafeas_run.py -t http://localhost:8080 -i demo1 -k bob -n update-version -m demo-project/foo.py -p demo-project/foo.py -- sed -i 's/foo-v0/foo-v1/' demo-project/foo.py
+#check at
+http://localhost:8080/v1alpha1/projects/demo/occurrences
+cp -r demo-project ../functionary_carl/
+
+#run package step
+cd ../functionary_carl
+python ../../totoify-grafeas/client/grafeas_run.py -t http://localhost:8080 -i demo1 -k carl -n package -m demo-project/foo.py -p demo-project.tar.gz -- tar --exclude ".git" -zcvf demo-project.tar.gz demo-project
+#check at
+http://localhost:8080/v1alpha1/projects/demo/occurrences
+cd ..
+cp owner_alice/alice.pub functionary_carl/demo-project.tar.gz final_product/
+
+
+#verify
+
+cd final_product
+python ../../totoify-grafeas/client/grafeas_verify.py -t http://localhost:8080 -i demo1 -k alice.pub
+
+#clean up
+cd ..
+python run_demo.py --clean
