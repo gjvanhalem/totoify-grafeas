@@ -1,7 +1,11 @@
 #setup
-in WSL
+docker run -d -p 8080:8080 gjvanhalem/grafeas:7be
 
-#create layout
+#clone the in-toto demo
+
+#in WSL
+
+#load layout in grafeas
 cd /mnt/c/wsrabo/argos/demo
 python ../totoify-grafeas/client/grafeas_load.py -t http://localhost:8080 -i demo1 -l root.layout
 #check at
