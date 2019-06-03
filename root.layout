@@ -1,0 +1,216 @@
+{
+ "signatures": [
+  {
+   "keyid": "556caebdc0877eed53d419b60eddb1e57fa773e4e31d70698b588f3e9cc48b35",
+   "sig": "72acc902f967afd3b315babd5efe5a5a76e9dc6784e1efbd463df96dd9a26862fb76f3bcb191250536ad30aa360f97a8c1a577baa3e0c1855255444392ccc25d9ce5c91a20c928a01f7dd6c4dbaf84f37dba0e327fd324c0626174f43b82d81eae183610edfd24deac1b3b532ae6958ea1a0f354e13e62b5c3b07fdfe3b9988bb437f21284dbdc51f41c56bd503a626a3ff0e11b8ecaebb2b35c89d1c96323af880a5979ec97f508d54c1ecb8fd7bdc65a201d7772fedca8ecf5e0b8c88976551299d5f3dc5dd0a08186e4be84aee504814ff003de4bd6156e8cc39e1fd54d7bb91ab4273d353550f72c8a98536a25bfbc629b3a958f9aa8c6fc8cf94550226dfeaae9b894ae072fef7ad92ede79ce63e248cd9818751c2b59626b03846b7e238fc25d1ae30fed693ab09b2277aa9503f72d8258fe34425520e841d6d0064bd8b183e48f1fc38031380c661a394c1120a6492cb0676d19720e4789cf2bdd0ca2c9b17e4c65679662bf7ad9c87ddc4ab6759d0542ffc034b579a50f298f419f23"
+  }
+ ],
+ "signed": {
+  "_type": "layout",
+  "expires": "2019-07-03T15:33:07Z",
+  "inspect": [
+   {
+    "_type": "inspection",
+    "expected_materials": [
+     [
+      "MATCH",
+      "demo-project.tar.gz",
+      "WITH",
+      "PRODUCTS",
+      "FROM",
+      "package"
+     ],
+     [
+      "ALLOW",
+      ".keep"
+     ],
+     [
+      "ALLOW",
+      "alice.pub"
+     ],
+     [
+      "ALLOW",
+      "root.layout"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "expected_products": [
+     [
+      "MATCH",
+      "demo-project/foo.py",
+      "WITH",
+      "PRODUCTS",
+      "FROM",
+      "update-version"
+     ],
+     [
+      "ALLOW",
+      "demo-project/.git/*"
+     ],
+     [
+      "ALLOW",
+      "demo-project.tar.gz"
+     ],
+     [
+      "ALLOW",
+      ".keep"
+     ],
+     [
+      "ALLOW",
+      "alice.pub"
+     ],
+     [
+      "ALLOW",
+      "root.layout"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "name": "untar",
+    "run": [
+     "tar",
+     "xzf",
+     "demo-project.tar.gz"
+    ]
+   }
+  ],
+  "keys": {
+   "2f89b9272acfc8f4a0a0f094d789fdb0ba798b0fe41f2f5f417c12f0085ff498": {
+    "keyid": "2f89b9272acfc8f4a0a0f094d789fdb0ba798b0fe41f2f5f417c12f0085ff498",
+    "keyid_hash_algorithms": [
+     "sha256",
+     "sha512"
+    ],
+    "keytype": "rsa",
+    "keyval": {
+     "private": "",
+     "public": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAzgLBsMFSgwBiWTBmVsyW\n5KbJwLFSodAzdUhU2Bq6SdRz/W6UOBGdojZXibxupjRtAaEQW/eXDe+1CbKg6ENZ\nGt2D9HGFCQZgQS8ONgNDQGiNxgApMA0T21AaUhru0vEofzdN1DfEF4CAGv5AkcgK\nsalhTyONervFIjFEdXGelFZ7dVMV3Pp5WkZPG0jFQWjnmDZhUrtSxEtqbVghc3kK\nAUj9Ll/3jyi2wS92Z1j5ueN8X62hWX2xBqQ6nViOMzdujkoiYCRSwuMLRqzW2CbT\nL8hF1+S5KWKFzxl5sCVfpPe7V5HkgEHjwCILXTbCn2fCMKlaSbJ/MG2lW7qSY2Ro\nwVXWkp1wDrsJ6Ii9f2dErv9vJeOVZeO9DsooQ5EuzLCfQLEU5mn7ul7bU7rFsb8J\nxYOeudkNBatnNCgVMAkmDPiNA7E33bmL5ARRwU0iZicsqLQR32pmwdap8PjofxqQ\nk7Gtvz/iYzaLrZv33cFWWTsEOqK1gKqigSqgW9T26wO9AgMBAAE=\n-----END PUBLIC KEY-----"
+    },
+    "scheme": "rsassa-pss-sha256"
+   },
+   "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b08453f5": {
+    "keyid": "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b08453f5",
+    "keyid_hash_algorithms": [
+     "sha256",
+     "sha512"
+    ],
+    "keytype": "rsa",
+    "keyval": {
+     "private": "",
+     "public": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA0Zfzonp3/FScaIP+KKuz\nB+OZNFpjbVGWjm3leqnFqHYLqrLcCw5KhlXpycJqoSvZBpO+PFCksUx8U/ryklHG\nVoDiB84pRkvZtBoVaA4b4IHDIhz1K5NqkJgieya4fwReTxmCW0a9gH7AnDicHBCX\nlzMxqEdt6OKMV5g4yjKaxf8lW72O1gSI46GSIToo+Z7UUgs3ofaM5UFIcczgCpUa\n5kEKocB6cSZ9U8PKRLSs0xO0ROjrcOTsfxMs8eV4bsRCWY5mAq1WM9EHDSV9WO8g\nqrRmanC4enNqa8jU4O3zhgJVegP9A01r9AwNt6AqgPSikwhXN/P4v1FMYV+R6N3b\nS1lsVWRAnwBq5RFz5zVvcY88JEkHbrcBqP/A4909NXae1VMXmnoJb4EzGAkyUySB\na+fHXAVJgzwyv3I48d/OIjH8NWcVmM/DQL7FtcJk3tp0YUjY5wNpcbQTnLzURtlU\nsd+MtGuvdlDxUUvtUYCIVKRdS8UzYnTPjI2xzeoSHZ2ZAgMBAAE=\n-----END PUBLIC KEY-----"
+    },
+    "scheme": "rsassa-pss-sha256"
+   }
+  },
+  "readme": "",
+  "steps": [
+   {
+    "_type": "step",
+    "expected_command": [
+     "git",
+     "clone",
+     "https://github.com/in-toto/demo-project.git"
+    ],
+    "expected_materials": [],
+    "expected_products": [
+     [
+      "CREATE",
+      "demo-project/foo.py"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "name": "clone",
+    "pubkeys": [
+     "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b08453f5"
+    ],
+    "threshold": 1
+   },
+   {
+    "_type": "step",
+    "expected_command": [
+     "sed",
+     "-i",
+     "s/foo-v0/foo-v1/",
+     "demo-project/foo.py"
+    ],
+    "expected_materials": [
+     [
+      "MATCH",
+      "demo-project/*",
+      "WITH",
+      "PRODUCTS",
+      "FROM",
+      "clone"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "expected_products": [
+     [
+      "ALLOW",
+      "demo-project/foo.py"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "name": "update-version",
+    "pubkeys": [
+     "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b08453f5"
+    ],
+    "threshold": 1
+   },
+   {
+    "_type": "step",
+    "expected_command": [
+     "tar",
+     "--exclude",
+     ".git",
+     "-zcvf",
+     "demo-project.tar.gz",
+     "demo-project"
+    ],
+    "expected_materials": [
+     [
+      "MATCH",
+      "demo-project/*",
+      "WITH",
+      "PRODUCTS",
+      "FROM",
+      "update-version"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "expected_products": [
+     [
+      "CREATE",
+      "demo-project.tar.gz"
+     ],
+     [
+      "DISALLOW",
+      "*"
+     ]
+    ],
+    "name": "package",
+    "pubkeys": [
+     "2f89b9272acfc8f4a0a0f094d789fdb0ba798b0fe41f2f5f417c12f0085ff498"
+    ],
+    "threshold": 1
+   }
+  ]
+ }
+}
