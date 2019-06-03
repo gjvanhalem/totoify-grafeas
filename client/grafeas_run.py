@@ -71,7 +71,7 @@ def main():
   try:
     # Create and return an unsigned link (not dumping to disk)
     link = runlib.in_toto_run(args.name, args.materials, args.products,
-        args.link_cmd, key=None)
+        args.link_cmd)
 
     # Now sign the link with the passed key
     key = util.import_rsa_key_from_file(args.key)

@@ -88,6 +88,10 @@ def fetch_occurrence(project_id, name, keyid, api_instance):
   ########### END FIXME: Fix deserialization
   ##########################################
 
+  ### even buggier ###
+  occurrence.link_metadata.signed.environment = {}
+  ###
+
   with open(link_file_name, "wt") as fp:
     json.dump(occurrence.link_metadata.to_dict(), fp)
 
@@ -99,7 +103,7 @@ def main():
   api_instance = swagger_client.GrafeasApi()
 
   try:
-    pubkey = util.import_rsa_public_keys_from_files_as_dict([args.key])
+    pubkey = util.import_public_keys_from_files_as_dict([args.key])
     layout = fetch_layout(args.project_id, api_instance)
 
   except Exception as e:

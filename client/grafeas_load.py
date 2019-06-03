@@ -77,6 +77,7 @@ def main():
     note = swagger_client.Note()
     note.step = json.dumps(attr.asdict(step))
     note.name = "projects/{}/notes/{}".format(project_id, step.name)
+    note.kind = "CUSTOM"
 
     try:
       api_response = api_instance.create_note(project_id,

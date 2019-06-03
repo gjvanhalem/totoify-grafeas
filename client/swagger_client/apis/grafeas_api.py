@@ -137,6 +137,7 @@ class GrafeasApi(object):
         body_params = None
         if 'note' in params:
             body_params = params['note']
+        print(body_params)
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\

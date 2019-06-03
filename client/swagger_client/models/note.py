@@ -191,7 +191,7 @@ class Note(object):
         :param kind: The kind of this Note.
         :type: str
         """
-        allowed_values = ["CUSTOM", "PACKAGE_VULNERABILITY", "BUILD_DETAILS", "IMAGE_BASIS", "PACKAGE_MANAGER", "DEPLOYABLE", "DISCOVERY", "ATTESTATION_AUTHORITY"]
+        allowed_values = ["NOTE_KIND_UNSPECIFIED","CUSTOM", "PACKAGE_VULNERABILITY", "BUILD_DETAILS", "IMAGE_BASIS", "PACKAGE_MANAGER", "DEPLOYABLE", "DISCOVERY", "ATTESTATION_AUTHORITY"]
         if kind not in allowed_values:
             raise ValueError(
                 "Invalid value for `kind` ({0}), must be one of {1}"
